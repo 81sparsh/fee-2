@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers - FoodHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        header {
+            background-color: #df8d2f;
+            color: white;
+            padding: 2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            margin-left: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .offers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .offer-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .offer-card h3 {
+            margin-top: 0;
+            color: #ff6347;
+        }
+        .offer-card p {
+            color: #666;
+        }
+        footer {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FoodHub Offers</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="offers.html">Offers</a>
+            <a href="help.html">Help</a>
+            <a href="signin.html">Sign In</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <section class="offers">
+            <h2>Special Offers</h2>
+            <div class="offer-card">
+                <h3>Buy 1 Get 1 Free</h3>
+                <p>Available on selected items</p>
+            </div>
+            <div class="offer-card">
+                <h3>20% Off</h3>
+                <p>On your first order</p>
+            </div>
+            <div class="offer-card">
+                <h3>Free Dessert</h3>
+                <p>With orders over $50</p>
+            </div>
+            <div class="offer-card">
+                <h3>Weekend Special</h3>
+                <p>30% off on all items</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 FoodHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
