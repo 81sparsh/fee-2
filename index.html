@@ -4,26 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+         
+        
+       
         /* General Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
             color: #333;
             background-color: #f9f9f9;
-            overflow-x:hidden;
+            /* overflow: hidden; */
+            overflow-x: hidden;
         }
 
-
         .header {
-            width: 100%;
+            width: 96%;
             color: #fff;
             background-color: #df8d2f;
             height: 80px;
             display: flex;
             align-items: center;
-            padding: 0 20px;
+            /* padding: 0 20px; */
             box-shadow: 0 4px 8px rgba(249, 105, 2, 0.1);
             position: relative;
             justify-content: space-between;
@@ -53,7 +56,7 @@
         .header-nav {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 30px;
         }
 
         .header-nav a {
@@ -107,7 +110,7 @@
             height: 120px;
             display: flex;
             align-items: center;
-            padding: 0 20px;
+            /* padding: 0 20px; */
             box-shadow: 0 4px 8px rgba(249, 105, 2, 0.1);
         }
 
@@ -250,19 +253,20 @@
             text-align: center;
             position: absolute;
             top: 170px;
-            left: 40%;
+            left: 35%;
+            
             padding: 40px 20px;
             transform: scale(2);
         }
 
         .foodhub h1 {
-            font-size: 40px;
+            font-size: 48px;
             color: #df8d2f;
             margin-bottom: 10px;
         }
 
         .foodhub h2 {
-            font-size: 24px;
+            font-size: 34px;
             color: #00ff80;
             margin: 0;
         }
@@ -405,11 +409,15 @@
 
         /* Extra small screens */
         @media (max-width: 480px) {
+            
+            .header{
+                width:98%;
+            }
+            
             .unique-carousel-track a {
                 flex: 0 0 100%;
                 max-width: 100%;
             }
-           
 
             .unique-carousel-arrow {
                 padding: 5px;
@@ -417,7 +425,10 @@
         }
 
         .foodhub {
-            padding-right: 5px;
+            padding-right: 25px;
+        }
+        @media(max-width:400px){
+
         }
 
         /* Very small screens */
@@ -425,6 +436,9 @@
             .unique-carousel-track a {
                 flex: 0 0 100%;
                 max-width: 100%;
+            }
+            .top{
+                color:blue;
             }
 
             .unique-carousel-arrow {
@@ -449,7 +463,7 @@
             text-decoration: wavy;
             font-style: oblique;
             color: red;
-            top: -50px;
+            top: 8px;
             z-index: 1;
         }
 
@@ -656,7 +670,7 @@
         .footer {
             background-color: #333;
             color: #fff;
-            padding: 20px;
+            /* padding: 20px; */
             width: 100%;
         }
 
@@ -716,12 +730,21 @@
                 align-items: center;
             }
         }
+        .foodhub{
+            top:220px;
+            
+        }
+        
+        .search-container{
+            top:525px;
+        }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
+            overflow-x:hidden;
         }
 
         .container {
@@ -882,6 +905,9 @@
         }
 
         @media (max-width: 768px) {
+            .search-container{
+                
+            }
             .restaurant-card {
                 width: 100%;
                 box-shadow: #333;
@@ -937,7 +963,7 @@
             }
 
             .header {
-                height: 200px;
+                height: 214px;
             }
 
             .carousel-wrapper {
@@ -957,23 +983,28 @@
             .search-box {
                 flex-direction: column;
                 width: 100%;
+                padding-top:100px;
             }
 
             .search-box input[type="text"] {
                 margin-right: 0;
+            }
+            .foodhub{
+                padding-right:3px;
             }
         }
 
         /* For mobile devices in landscape mode */
         @media (max-width: 768px) {
             .foodhub h1 {
-                font-size: 30px;
+                font-size: 50px;
             }
 
             .header {}
 
             .foodhub h2 {
-                font-size: 18px;
+                font-size: 32px;
+                max-width:200px;
             }
 
             .search-bar input {
@@ -1004,6 +1035,10 @@
             .header {
                 height: auto;
                 padding: 10px;
+                padding-right:4px;
+            }
+            .foodhub{
+                padding-right:0px;
             }
 
             .header-content {
@@ -1031,12 +1066,22 @@
 
             .foodhub h1 {
                 font-size: 40px;
-                padding-right: 70px;
+                padding-right: 45px;
+                max-width: 100%; /* Ensure the width doesn't exceed the viewport */
+                box-sizing: border-box;
             }
 
             .foodhub h2 {
-                font-size: 16px;
+                font-size: 30px;
+                position:absolute;
+                top:121px;
+                /*transform:scale(1.8);*/
+                max-width: 100%; /* Ensure the width doesn't exceed the viewport */
+                box-sizing: border-box;  /*this styling is use to prevent the horizontal scroll*/
                 padding-right: 60px;
+                left:-39px;
+                max-width:167px;
+                
             }
 
             .search-bar input {
@@ -1046,6 +1091,28 @@
             .search-bar button {
                 padding: 8px 12px;
                 font-size: 12px;
+            }
+        }
+        @media (min-width: 481px) and (max-width:577px){
+            .foodhub h1{
+                font-size:42px;
+                position:absolute;
+                top:-17px;
+                left:-52px;
+
+
+            }
+            .header{
+                height:180px;   
+            }
+            .foodhub h2{
+                font-size:32px;
+                position:absolute;
+                top:80px;
+                left:-25px;
+            }
+            .search-container{
+                padding-top:48px;
             }
         }
 
@@ -1073,6 +1140,9 @@
                 font-size: 13px;
                 /* Adjusted font size */
             }
+            .foodhub h1{
+                padding-right:4px;
+            }
         }
 
         /* Medium Devices (Tablets) */
@@ -1081,7 +1151,11 @@
                 flex-direction: column;
                 align-items: center;
             }
+            .foodhub h2{
+                font-size:25px;
+            }
 
+            
             .footer-column {
                 text-align: center;
                 margin: 10px 0;
@@ -1220,18 +1294,20 @@
 
                 z-index: 1;
                 gap: 50px;
+                row-gap:20px;
+                padding-bottom:20px;
                 display: flex;
                 flex-wrap: wrap;
-                padding-left: 20px;
+                padding-left: 10px;
             }
 
             .header {
-                padding-bottom: 200px;
+                padding-bottom: 20px;
             }
 
             .carousel-wrapper {
-                position: absolute;
-                top: 200px;
+                position: relative;
+                top: 0px;
             }
         }
 
@@ -1520,9 +1596,16 @@
         }
 
         @media (max-width: 576px) {
+            .header{
+                width:96%;
+            }
             .what {
                 font-size: 30px;
                 margin-left: 10px;
+            }
+            .search-box{
+                padding-top:60px;
+                
             }
 
             .header {}
@@ -1647,6 +1730,9 @@
         }
 
         @media (max-width: 480px) {
+            .search-container{
+                max-width:194px;
+            }
 
             .rest-h1,
             .rest-h2 {
@@ -1659,6 +1745,43 @@
 
             .rest-container {
                 padding: 10px;
+            }
+            .top{
+                font-size:45px;
+                top:-30px;
+                left:120px;
+                       }
+            .logo{
+                left:0px;
+            }
+            .foodhub h1{
+                font-size:36px;
+                padding-top:10px;
+                max-width:20px;
+                left:-67px;
+                top:-39px;
+                position:relative;
+            
+            }
+            .foodhub h2{
+            }
+            
+            .foodhub{
+                max-width:10px;
+            }
+            .search-box{
+                position:relative;
+                top:65px;
+                transform:scale(0.9);
+                left:-20px;
+            }
+            .carousel-item{
+                transform: scaleY(1.2);
+            }
+        }
+        @media (min-width:480px) and (max-width:581px){
+            .header-nav{
+                
             }
         }
 
@@ -1741,7 +1864,7 @@
                 <option value="miami">Miami</option>
             </select>
             <input type="text" id="restaurant-search" placeholder="Search for a restaurant...">
-            <button type="button">Search</button>
+            <button type="button" class="search-button-11">Search</button>
         </div>
     </div>
 
@@ -1880,7 +2003,7 @@
 
         <!-- Filter Section -->
         <div class="filter-section">
-            <div><a href="#">Fast Delivery</a></div>
+            <div onclick="filter(2)">Fast Delivery</div>
             <div><a href="#">Ratings 4.0+</a></div>
             <div><a href="#">Pure Veg</a></div>
             <div><a href="#">Offers</a></div>
@@ -1897,7 +2020,7 @@
         <!-- Restaurant List -->
         <div class="restaurant-list">
             <!-- Restaurant Card 1 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="1">
                 <a href="delivery.html">
                     <img src="rest1.avif" alt="Shree Naivedyam" class="restaurant-image">
                 </a>
@@ -1905,6 +2028,7 @@
                     <h3>Shree Naivedyam</h3>
                     <p class="offer">10% OFF UPTO ₹40</p>
                     <p class="rating">4.3</p>
+                    
                     <p class="delivery-time">Delivery in 45-50 mins</p>
                     <p>Cuisine: North Indian, Chinese, South Indian, Pizzas, Beverages</p>
                     <p>Location: Chandigarh City</p>
@@ -1912,7 +2036,7 @@
             </div>
 
             <!-- Restaurant Card 2 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="2">
                 <a href="delivery.html">
                     <img src="rest2.avif" alt="The Fusion Lounge" class="restaurant-image">
                 </a>
@@ -1927,7 +2051,7 @@
             </div>
 
             <!-- Restaurant Card 3 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="3">
                 <a href="delivery.html">
                     <img src="rest3.avif" alt="Mr. Gurung Momo & Chinese Corner" class="restaurant-image">
                 </a>
@@ -1942,7 +2066,7 @@
             </div>
 
             <!-- Restaurant Card 4 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="4">
                 <a href="delivery.html">
                     <img src="rest4.avif" alt="Magic Momo" class="restaurant-image">
                 </a>
@@ -1956,7 +2080,7 @@
             </div>
 
             <!-- Restaurant Card 5 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="5">
                 <a href="delivery.html">
                     <img src="rest5.avif" alt="Rangla Panjab" class="restaurant-image">
                 </a>
@@ -1970,7 +2094,7 @@
             </div>
 
             <!-- Restaurant Card 6 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="6">
                 <a href="delivery.html">
                     <img src="rest6.avif" alt="28 Spice Club" class="restaurant-image">
                 </a>
@@ -1984,7 +2108,7 @@
             </div>
 
             <!-- Restaurant Card 7 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="7">
                 <a href="delivery.html">
                     <img src="rest7.avif" alt="Apni Chopati" class="restaurant-image">
                 </a>
@@ -1998,7 +2122,7 @@
             </div>
 
             <!-- Restaurant Card 8 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="8">
                 <a href="delivery.html">
                     <img src="rest8.avif" alt="Sanju Ka Dhaba" class="restaurant-image">
                 </a>
@@ -2012,7 +2136,7 @@
             </div>
 
             <!-- Restaurant Card 9 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="9">
                 <a href="delivery.html">
                     <img src="rest9.avif" alt="Raimens Cafe 79" class="restaurant-image">
                 </a>
@@ -2026,7 +2150,7 @@
             </div>
 
             <!-- Restaurant Card 10 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="10">
                 <a href="delivery.html">
                     <img src="rest10.avif" alt="Chaska Cafe" class="restaurant-image">
                 </a>
@@ -2040,7 +2164,7 @@
             </div>
 
             <!-- Restaurant Card 11 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="11">
                 <a href="delivery.html">
                     <img src="rest11.avif" alt="The Veg Legacy" class="restaurant-image">
                 </a>
@@ -2054,7 +2178,7 @@
             </div>
 
             <!-- Restaurant Card 12 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="12">
                 <a href="delivery.html">
                     <img src="rest12.avif" alt="Bharat Mewad Ice Cream" class="restaurant-image">
                 </a>
@@ -2071,7 +2195,7 @@
         <div class="restaurant-list">
             <!-- Restaurant Card 1 -->
             <!-- Restaurant Card 1 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="13">
                 <a href="delivery.html">
                     <img src="rest13.avif" alt="Shree Naivedyam" class="restaurant-image">
                 </a>
@@ -2086,7 +2210,7 @@
             </div>
 
             <!-- Restaurant Card 2 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="14">
                 <a href="delivery.html">
                     <img src="rest14.avif" alt="The Fusion Lounge" class="restaurant-image">
                 </a>
@@ -2101,7 +2225,7 @@
             </div>
 
             <!-- Restaurant Card 3 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="15">
                 <a href="delivery.html">
                     <img src="rest15.avif" alt="Mr. Gurung Momo & Chinese Corner" class="restaurant-image">
                 </a>
@@ -2116,7 +2240,7 @@
             </div>
 
             <!-- Restaurant Card 4 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="16">
                 <a href="delivery.html">
                     <img src="rest16.avif" alt="Magic Momo" class="restaurant-image">
                 </a>
@@ -2130,7 +2254,7 @@
             </div>
 
             <!-- Restaurant Card 5 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="17">
                 <a href="delivery.html">
                     <img src="rest29.avif" alt="Rangla Panjab" class="restaurant-image">
                 </a>
@@ -2144,7 +2268,7 @@
             </div>
 
             <!-- Restaurant Card 6 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="18">
                 <a href="delivery.html">
                     <img src="rest30.avif" alt="28 Spice Club" class="restaurant-image">
                 </a>
@@ -2158,7 +2282,7 @@
             </div>
 
             <!-- Restaurant Card 7 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="19">
                 <a href="delivery.html">
                     <img src="rest31.avif" alt="Apni Chopati" class="restaurant-image">
                 </a>
@@ -2172,7 +2296,7 @@
             </div>
 
             <!-- Restaurant Card 8 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="20">
                 <a href="delivery.html">
                     <img src="rest32.avif" alt="Sanju Ka Dhaba" class="restaurant-image">
                 </a>
@@ -2186,12 +2310,13 @@
             </div>
 
             <!-- Restaurant Card 9 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="21">
                 <a href="delivery.html">
                     <img src="rest21.avif" alt="Raimens Cafe 79" class="restaurant-image">
                 </a>
                 <div class="restaurant-info">
                     <h3>Raimens Cafe 79</h3>
+                    
                     <p class="rating">4.4</p>
                     <p class="delivery-time">Delivery in 50-55 mins</p>
                     <p>Cuisine: Bakery, Pizzas, Snacks, Beverages</p>
@@ -2200,7 +2325,7 @@
             </div>
 
             <!-- Restaurant Card 10 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="22">
                 <a href="delivery.html">
                     <img src="rest22.avif" alt="Chaska Cafe" class="restaurant-image">
                 </a>
@@ -2214,7 +2339,7 @@
             </div>
 
             <!-- Restaurant Card 11 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="23">
                 <a href="delivery.html">
                     <img src="rest23.avif" alt="The Veg Legacy" class="restaurant-image">
                 </a>
@@ -2228,7 +2353,7 @@
             </div>
 
             <!-- Restaurant Card 12 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="24">
                 <a href="delivery.html">
                     <img src="rest24.avif" alt="Bharat Mewad Ice Cream" class="restaurant-image">
                 </a>
@@ -2243,7 +2368,7 @@
             </div>
 
             <!-- Restaurant Card 13 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="25">
                 <a href="delivery.html">
                     <img src="rest25.avif" alt="Annu's Kitchen's Queen Of Paratha" class="restaurant-image">
                 </a>
@@ -2257,7 +2382,7 @@
             </div>
 
             <!-- Restaurant Card 14 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="26">
                 <a href="delivery.html">
                     <img src="rest26.avif" alt="Urban Cafe" class="restaurant-image">
                 </a>
@@ -2271,7 +2396,7 @@
             </div>
 
             <!-- Restaurant Card 15 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="27">
                 <a href="delivery.html">
                     <img src="rest27.avif" alt="The Party Hub" class="restaurant-image">
                 </a>
@@ -2285,7 +2410,7 @@
             </div>
 
             <!-- Restaurant Card 16 -->
-            <div class="restaurant-card">
+            <div class="restaurant-card" data-index="28">
                 <a href="delivery.html">
                     <img src="rest28.avif" alt="India Gate Restaurant" class="restaurant-image">
                 </a>
@@ -2530,41 +2655,41 @@
             <div class="footer-column">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Spicytaste One</a></li>
-                    <li><a href="#">Spicytaste Instamart</a></li>
-                    <li><a href="#">Spicytaste Genie</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="carrers.html">Careers</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="spicytaseonepage.html">Spicytaste One</a></li>
+                    <li><a href="instamart.html">Spicytaste Instamart</a></li>
+                    <li><a href="genie.html">Spicytaste Genie</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Contact us</h4>
                 <ul>
-                    <li><a href="#">Help & Support</a></li>
-                    <li><a href="#">Partner with us</a></li>
-                    <li><a href="#">Ride with us</a></li>
+                    <li><a href="help_support.html">Help & Support</a></li>
+                    <li><a href="partener..html">Partner with us</a></li>
+                    <li><a href="ride.html">Ride with us</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Legal</h4>
                 <ul>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="cookoiee.html">Cookie Policy</a></li>
+                    <li><a href="privatepolicy.html">Privacy Policy</a></li>
+                    <li><a href="investorrelation.html">Investor Relations</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>We deliver to:</h4>
                 <ul>
-                    <li><a href="#">Bangalore</a></li>
-                    <li><a href="#">Gurgaon</a></li>
-                    <li><a href="#">Hyderabad</a></li>
-                    <li><a href="#">Delhi</a></li>
-                    <li><a href="#">Mumbai</a></li>
-                    <li><a href="#">Pune</a></li>
-                    <li>589 cities</li>
+                    <li><a href="wedeliverto.html">Bangalore</a></li>
+                    <li><a href="wedeliverto.html">Gurgaon</a></li>
+                    <li><a href="wedeliverto.html">Hyderabad</a></li>
+                    <li><a href="wedeliverto.html">Delhi</a></li>
+                    <li><a href="wedeliverto.html">Mumbai</a></li>
+                    <li><a href="wedeliverto.html">Pune</a></li>
+                    <li><a href="wedeliverto.html">589 cities</a></li>
                 </ul>
             </div>
         </div>
@@ -2620,6 +2745,19 @@
                 updateArrows();
             });
         });
+        function filter(number){
+            let card = document.getElementsByClassName("restaurant-card");
+            for(let i=0; i<card.length;i++){
+                let index= parseInt(card[i].getAttribute('data-index'));
+                
+                if (index % number === 0) {
+                    cards[i].style.display = ""; // Show the card
+                } else {
+                    cards[i].style.display = "none"; // Hide the card
+                }
+            }
+        }
+
     </script>
 </body>
 
