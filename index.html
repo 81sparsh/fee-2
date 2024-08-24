@@ -2751,9 +2751,9 @@
                 let index= parseInt(card[i].getAttribute('data-index'));
                 
                 if (index % number === 0) {
-                    cards[i].style.display = ""; // Show the card
+                    card[i].style.display = ""; // Show the card
                 } else {
-                    cards[i].style.display = "none"; // Hide the card
+                    card[i].style.display = "none"; // Hide the card
                 }
             }
         }
